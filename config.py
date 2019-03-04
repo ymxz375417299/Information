@@ -23,3 +23,23 @@ class Config:
     SESSION_USE_SIGNER = True # 让cookie中的session_id 被加密签名处理
     SESSION_PERMANENT = False # 设置session过期
     PERMANENT_SESSION_LIFETIME = 86400 * 2 # session的有效期2天，单位秒，默认31天
+
+
+class DevelopmentConfig(Config):
+    """开发模式的配置"""
+    DEBUG = True
+
+class ProductionConfig(Config):
+    """生产模式的配置"""
+    DEBUG = False
+
+class TestingConfig(Config):
+    """单元测试的环境的配置"""
+    DEBUG = True
+    TESTING = True
+
+config = {
+    'development': DevelopmentConfig,
+    'production': ProductionConfig,
+    'testing': TestingConfig,
+}
