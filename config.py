@@ -2,6 +2,7 @@
 # 配置模块
 
 import redis
+import logging
 
 
 class Config:
@@ -28,15 +29,18 @@ class Config:
 class DevelopmentConfig(Config):
     """开发模式的配置"""
     DEBUG = True
+    LOG_EVEL = logging.DEBUG
 
 class ProductionConfig(Config):
     """生产模式的配置"""
     DEBUG = False
+    LOG_EVEL = logging.ERROR
 
 class TestingConfig(Config):
     """单元测试的环境的配置"""
     DEBUG = True
     TESTING = True
+    LOG_EVEL = logging.DEBUG
 
 config = {
     'development': DevelopmentConfig,

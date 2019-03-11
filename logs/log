@@ -1,0 +1,27 @@
+INFO _internal.py:88 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 * Restarting with stat
+WARNING _internal.py:88 * Debugger is active!
+INFO _internal.py:88 * Debugger PIN: 119-592-560
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:02:49] "GET / HTTP/1.1" 500 -
+INFO _internal.py:88 * Detected change in '/mnt/rock/Flask_Project/Information/manage.py', reloading
+INFO _internal.py:88 * Restarting with stat
+WARNING _internal.py:88 * Debugger is active!
+INFO _internal.py:88 * Debugger PIN: 119-592-560
+INFO _internal.py:88 * Detected change in '/mnt/rock/Flask_Project/Information/manage.py', reloading
+INFO _internal.py:88 * Restarting with stat
+WARNING _internal.py:88 * Debugger is active!
+INFO _internal.py:88 * Debugger PIN: 119-592-560
+DEBUG manage.py:22logging testing!
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:04:22] "GET / HTTP/1.1" 200 -
+DEBUG manage.py:22logging testing!
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:04:30] "GET / HTTP/1.1" 200 -
+DEBUG manage.py:22logging testing!
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:04:31] "GET / HTTP/1.1" 200 -
+DEBUG manage.py:22logging testing!
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:04:32] "GET / HTTP/1.1" 200 -
+DEBUG manage.py:22logging testing!
+INFO _internal.py:88127.0.0.1 - - [12/Mar/2019 03:04:32] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 * Detected change in '/mnt/rock/Flask_Project/Information/manage.py', reloading
+INFO _internal.py:88 * Restarting with stat
+WARNING _internal.py:88 * Debugger is active!
+INFO _internal.py:88 * Debugger PIN: 119-592-560
