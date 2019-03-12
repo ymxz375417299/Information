@@ -145,3 +145,175 @@ INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:20:23] "GET /
 INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:20:47] "GET /static/news/index.html HTTP/1.1" 404 -
 INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:21:32] "GET /static/news/html/index.html HTTP/1.1" 200 -
 INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:21:52] "GET /static/news/html/index.html HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+DEBUG views.py lines: 11 massage: logging testing!
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [13/Mar/2019 03:15:47] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/ipfsmain/Information/info/modules/index/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/ipfsmain/Information/info/modules/index/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+INFO _internal.py lines: 88 massage:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:28:49] "GET /favicon.ico HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:29:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:52] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:30:53] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/ipfsmain/Information/info/modules/index/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 119-592-560
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:25] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:26] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:37] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:37] "GET /css/reset.css HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:32:53] "GET /images/pic_code.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:28] "GET /images/person.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:44] "GET /images/pic_code.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:33:51] "GET /images/pic_code.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:07] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:14] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:14] "GET /css/reset.css HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:29] "GET /images/pic_code.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:34:51] "GET /images/person01.png HTTP/1.1" 404 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:35:16] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:35:16] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:35:45] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:35:45] "GET /favicon.ico HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:35:46] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /css/reset.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:03] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.31.133 - - [13/Mar/2019 03:36:04] "GET /favicon.ico HTTP/1.1" 200 -
