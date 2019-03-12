@@ -133,3 +133,15 @@ ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
 ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
 ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
 ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
+INFO _internal.py lines: 88 massage:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 289-858-870
+DEBUG views.py lines: 10 massage: logging testing!
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:18:51] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:19:42] "GET /static/news/index.html HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:19:53] "GET /info/static/news/index.html HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:20:23] "GET /static/news/index.html HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:20:47] "GET /static/news/index.html HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:21:32] "GET /static/news/html/index.html HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 20:21:52] "GET /static/news/html/index.html HTTP/1.1" 200 -
