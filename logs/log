@@ -129,3 +129,7 @@ DEBUG views.py lines: 10 massage: logging testing!
 INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 18:44:50] "GET / HTTP/1.1" 200 -
 DEBUG views.py lines: 10 massage: logging testing!
 INFO _internal.py lines: 88 massage: 127.0.0.1 - - [12/Mar/2019 18:44:54] "GET / HTTP/1.1" 200 -
+ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
+ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
+ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists
+ERROR __init__.py lines: 97 massage: Error: Directory migrations already exists

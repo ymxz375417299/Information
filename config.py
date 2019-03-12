@@ -12,7 +12,7 @@ class Config:
     # HOST = '0.0.0.0'
     # PORT = 5000
     # mysql配置
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/information'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/py3_flask_information'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # redis配置
     REDIS_HOST = '127.0.0.1'

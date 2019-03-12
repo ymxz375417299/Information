@@ -3,7 +3,7 @@
 from flask import current_app
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-from info import create_app, db
+from info import create_app, db, models
 
 # 创建app, 并传入配置模式：development, production, testing
 app = create_app('development')
