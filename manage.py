@@ -17,11 +17,5 @@ manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
 
-@app.route('/', methods=['GET'])
-def index():
-    current_app.logger.debug('logging testing!')
-    return 'hello world'
-
-
 if __name__ == '__main__':
     manager.run()
