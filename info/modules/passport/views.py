@@ -1,4 +1,6 @@
 # coding=utf-8
+import re
+import random
 from flask import request
 from flask import abort
 from flask import jsonify
@@ -9,6 +11,7 @@ from info import redis_store
 from info.utils.captcha.captcha import captcha
 from info.utils.response_code import RET
 from info import constants
+from info.libs.yuntongxun.sms import CCP
 from . import passport_blu
 
 
@@ -43,3 +46,53 @@ def get_image_code():
     # 设置返回的content_type
     resp.headers['Content_Type'] = 'image/jpg'
     return resp
+
+@passport_blu.route('/smscode', methods=['POST'])
+def send_sms():
+    """
+    1. 接受参数： 手机号，图片验证码内容，图片验证码id
+    2. 校验参数（是否有值，是否符合规则） 
+    3. 通过传入的图片编码核对redis真实性
+    4. 进行验证码内容的比对，如果不一致，返回验证码错误
+    5. 生成随机短信验证码并发送短信
+    6. redis保存短信验证码内容
+    7. 返回发送成功响应
+    """
+
+    # 1. 接受参数并判断是否有值
+    # 取到请求值的内容，但是默认是字符串转成json方便处理
+    # param_dict = json.loads(request.data)
+    param_dict = request.json 
+    mobile = param_dict.get('mobile')
+    image_code = param_dict.get('image_code')
+    image_code_id = param_dict.get('image_code_id')
+
+    # 2. 校验参数（是否有值，是否符合规则） 
+    if not all(mobile, image_code, image_code_id):
+        return jsonify(errno=RET.PARAMERR, errmsg='参数补全')
+    # 2.1 手机号是否合法
+    if not re.match('^1{35678}\d(9)$', mobile):
+        return jsonify(errno=RET.DATAERR, errmsg='手机号不合法')
+    # 3. 通过传入的图片编码核对redis真实性
+    try:
+        real_image_code = redis_store.get('ImageCode_' + image_code_id)
+        # 如果能够取出值，删除redis中的缓存内容
+        if real_image_code:
+            redis_store.delete('ImageCode_' + image_code_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='获取图片验证码失败')
+    # 3.1 虽然redis成功取出来了。但是也有空值可能
+    if not real_image_code:
+        return jsonify(errno=RET.NODATA, errmsg='验证码已过期')
+    # 4. 进行验证码内容的比对，如果不一致，返回验证码错误
+    if image_code != real_image_code:
+        # 验证码输出错误
+        return jsonify(errno=RET.DATAERR, errmsg='验证码错误')
+    # 4.1 TODO补： 校验手机号码是否已注册
+    # 5. 生成随机短信验证码并发送短信
+    result = '%06d' % random.randint(0,999999)
+
+
+    # 6. redis保存短信验证码内容
+    # 7. 返回发送成功响应

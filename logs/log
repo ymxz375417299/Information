@@ -573,3 +573,5 @@ INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 17:50:49] "G
 INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 17:50:49] "GET /passport/image_code?code_id=59469094-33c1-45d7-9592-7d11a201927a HTTP/1.1" 200 -
 INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 17:50:49] "GET /passport/image_code?code_id=c2106f1b-279a-4b62-9ef2-054491a30fd3 HTTP/1.1" 200 -
 INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 17:50:49] "GET /passport/image_code?code_id=f93f190b-4f7d-4f1e-a216-7cf9c7400329 HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
