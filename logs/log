@@ -328,3 +328,41 @@ INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Informati
 INFO _internal.py lines: 88 massage:  * Restarting with stat
 WARNING _internal.py lines: 88 massage:  * Debugger is active!
 INFO _internal.py lines: 88 massage:  * Debugger PIN: 289-858-870
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:14] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /css/main.css HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /js/jquery-1.12.4.min.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /js/main.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /js/index.js HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /images/logo.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /images/news_pic.jpg HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /images/person01.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /images/pic_code.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:15] "GET /images/person.png HTTP/1.1" 404 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:52:16] "GET /favicon.ico HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:47] "GET / HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:56:58] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:05] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:07] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:08] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:09] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:10] "GET / HTTP/1.1" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [13/Mar/2019 14:57:21] "GET / HTTP/1.1" 200 -
