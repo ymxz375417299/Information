@@ -36,7 +36,8 @@ def get_image_code():
     name, text, image = captcha.generate_captcha()
     # 4. 保存图片验证码内容到redis
     try:
-        redis_store.setex("ImageCode_" + code_id, constants.IMAGE_CODE_REDIS_EXPIRES, text)
+        redis_store.setex("ImageCode_" + code_id,
+                          constants.IMAGE_CODE_REDIS_EXPIRES, text)
     except Exception as e:
         current_app.logger.error(e)
         return make_response(jsonify(errno=RET.DATAERR, errmsg='保存图片验证码失败'))
@@ -46,6 +47,7 @@ def get_image_code():
     # 设置返回的content_type
     resp.headers['Content_Type'] = 'image/jpg'
     return resp
+
 
 @passport_blu.route('/smscode', methods=['POST'])
 def send_sms():
@@ -62,12 +64,12 @@ def send_sms():
     # 1. 接受参数并判断是否有值
     # 取到请求值的内容，但是默认是字符串转成json方便处理
     # param_dict = json.loads(request.data)
-    param_dict = request.json 
+    param_dict = request.json
     mobile = param_dict.get('mobile')
     image_code = param_dict.get('image_code')
     image_code_id = param_dict.get('image_code_id')
 
-    # 2. 校验参数（是否有值，是否符合规则） 
+    # 2. 校验参数（是否有值，是否符合规则）
     if not all(mobile, image_code, image_code_id):
         return jsonify(errno=RET.PARAMERR, errmsg='参数补全')
     # 2.1 手机号是否合法
@@ -91,8 +93,19 @@ def send_sms():
         return jsonify(errno=RET.DATAERR, errmsg='验证码错误')
     # 4.1 TODO补： 校验手机号码是否已注册
     # 5. 生成随机短信验证码并发送短信
-    result = '%06d' % random.randint(0,999999)
-
-
+    sms_code = '%06d' % random.randint(0, 999999)
+    current_app.logger.debug('短信验证码内容：%s' % sms_code)
+    result = CCP().send_template_sms(mobile, [sms_code,
+                                              contants.SMS_CODE_REDIS_EXPIRES/60], '1')
+    if result != 0:
+        # 成功返回0
+        return jsonify(errno=RET.THIRDERR, errmsg='第三方发错出错')
     # 6. redis保存短信验证码内容
+    try:
+        redis_store.setex("SMS_" % mobile, sms_code,
+                          constants.SMS_CODE_REDIS_EXPIRES)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='保存短信验证码失败')
     # 7. 返回发送成功响应
+    return jsonify(errno=RET.OK, errmsg='发送成功')
