@@ -34,9 +34,12 @@ def create_app(config_name):
     CSRFProtect(app)
     # 设置session保存位置，配置信息由app的config中提取，所以在config中设置session
     Session(app)
-    # 注册蓝图
+    # 注册首页模块蓝图
     from info.modules.index import index_blu
     app.register_blueprint(index_blu)
+    # 注册passport模块蓝图
+    from info.modules.passport import passport_blu 
+    app.register_blueprint(passport_blu)
 
     return app
 
