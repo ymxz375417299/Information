@@ -6,11 +6,11 @@ from .CCPRestSDK import REST
 # 说明：主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID                                                                                                                                    
 _accountSid = ''
 # 说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN                                                                                                                                  
-_accountToken = ''
+_accountToken = '3df1186fece043f3a7c66fd4f90148a8'
 # 请使用管理控制台首页的APPID或自己创建应用的APPID                                                                                                                                                                  
-_appId = ''
+_appId = '8a216da86812593601682c07866b0cb3'
 # 说明：请求地址，生产环境配置成app.cloopen.com                                                                                                                                                                     
-_serverIP = ''
+_serverIP = 'sandboxapp.cloopen.com'
 # 说明：请求端口 ，生产环境为8883
 _serverPort = "8883" 
 # 说明：REST API版本号保持不变
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     #参数1: 发送给谁的手机号
     #参数2: ['内容', 有效时间单位分钟]
     #参数3: 模板编号1 【云通讯】您使用的是云通讯短信模板，您的验证码是{1}，请于{2}分钟内正确输入
-    ccp.send_template_sms('', ['666666', 5], 1)
+    ccp.send_template_sms('13666', ['666666', 5], 1)
 

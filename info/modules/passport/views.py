@@ -1,18 +1,24 @@
 # coding=utf-8
 import re
 import random
+import datetime
+
 from flask import request
 from flask import abort
 from flask import jsonify
 from flask import make_response
 from flask import current_app
+from flask import session
 
 from info import redis_store
+from info import db
+from info import constants
 from info.utils.captcha.captcha import captcha
 from info.utils.response_code import RET
-from info import constants
 from info.libs.yuntongxun.sms import CCP
+from info.models import User # 数据库模型
 from . import passport_blu
+
 
 
 @passport_blu.route('/image_code')
@@ -72,7 +78,7 @@ def send_sms():
 
     # 2. 校验参数（是否有值，是否符合规则）
     if not all((mobile, image_code, image_code_id)):
-        return jsonify(errno=RET.PARAMERR, errmsg='参数不全')
+        return jsonify(errno=RET.PARAMERR, errmsg='参数错误')
     # 2.1 手机号是否合法
     if not re.match('^1[35678]\d{9}$', mobile):
         return jsonify(errno=RET.DATAERR, errmsg='手机号不合法')
@@ -111,3 +117,73 @@ def send_sms():
         return jsonify(errno=RET.DBERR, errmsg='保存短信验证码失败')
     # 7. 返回发送成功响应
     return jsonify(errno=RET.OK, errmsg='发送成功')
+
+
+@passport_blu('/register', method=['POST'])
+def register():
+    """
+    1. 获取参数
+    2. 判断参数是否有值
+    3. 判断参数是否合法（手机号）
+    4. 从redis中获取指定手机号对应的短信验证码 
+    5. 校验验证码
+    6. 初始化user模型， 添加数据至数据库
+    7. 保存当前的用户状态
+    6. 返回注册结果
+    """
+
+    
+    # 1. 获取参数
+    json_data = request.json
+    mobile = json_data.get('mobile')
+    sms_code = json_data.get('smscode')
+    password = json_data.get('password')
+    # 2. 判断参数是否合法（手机号）
+    if not re.match('^1[35678]\d{9}$', mobile):
+        return jsonify(errno=RET.DATAERR, errmsg='手机号不合法')
+    # 3. 判断参数是否有值
+    if not all((mobile, sms_code, password)):
+        return jsonify(errno=RET.PARAMERR, errmsg='参数错误')
+    # 4. 从redis中获取指定手机号对应的短信验证码 
+    try:
+        real_sms_code = redis_store.get('SMS_%s' % mobile)
+    except Exception as e:
+        current_app.logger.error(e)
+        retur jsonify(errno=RET.DBERR, errmsg='获取本地验证码失败')
+    
+    # 4.1 短信验证码过期
+    if not real_sms_code:
+        return jsonify(errno=RET.NODATA, errmsg='短信验证码过期')
+    # 5. 校验验证码
+    if sms_code != real_sms_code:
+        return jsonify(errno=RET.DATAERR, errmsg='短信验证码错误')
+    # 6. 删除验证码
+    try:
+        redis_store.delete('SMS_%s' % mobile)
+    except Exception as e:
+        current_app.logger.error(e)
+    # 6. 初始化user模型， 添加数据至数据库
+    usr = User()
+    # 刚注册没有昵称，默认使用手机号作为昵称
+    user.nick_name = mobile
+    user.mobile = mobile
+    # TODO:对密码加密处理使用装饰器进行加密，这里不做修改
+    user.password = password
+    # 记录一下用户最后一次登录时间
+    user.last_time = datetime.now()
+    # 添加数据
+    try:
+        # 创建会话，并把实例的模型user添加进去
+        db.session.add(user)
+        # 提交事务
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errnno=RET.DBERR, errmsg='数据保存失败')
+    # 7. 保存session当前的用户状态
+    session['user_id'] = user.id
+    session['nick_name'] = user.nick_name
+    session['mobile'] = user.mobile
+    # 6. 返回注册结果
+    return jsonify(errno=RET.OK, errmsg='OK')
+
