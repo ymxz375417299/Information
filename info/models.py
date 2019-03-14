@@ -60,10 +60,11 @@ class User(BaseModel, db.Model):
 
     @property
     def password(self):
-        raise AttributeError("当前属性不可读")
+        raise Exception('不允许读取')
 
     @password.setter
     def password(self, value):
+        """对password_hash列进行哈希加密"""
         self.password_hash = generate_password_hash(value)
 
     def check_passowrd(self, password):

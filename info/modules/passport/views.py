@@ -1,7 +1,7 @@
 # coding=utf-8
 import re
 import random
-import datetime
+from datetime import datetime 
 
 from flask import request
 from flask import abort
@@ -119,9 +119,10 @@ def send_sms():
     return jsonify(errno=RET.OK, errmsg='发送成功')
 
 
-@passport_blu('/register', method=['POST'])
+@passport_blu.route('/register', methods=['POST'])
 def register():
     """
+    注册接口
     1. 获取参数
     2. 判断参数是否有值
     3. 判断参数是否合法（手机号）
@@ -131,7 +132,6 @@ def register():
     7. 保存当前的用户状态
     6. 返回注册结果
     """
-
     
     # 1. 获取参数
     json_data = request.json
@@ -149,7 +149,7 @@ def register():
         real_sms_code = redis_store.get('SMS_%s' % mobile)
     except Exception as e:
         current_app.logger.error(e)
-        retur jsonify(errno=RET.DBERR, errmsg='获取本地验证码失败')
+        return jsonify(errno=RET.DBERR, errmsg='获取本地验证码失败')
     
     # 4.1 短信验证码过期
     if not real_sms_code:
@@ -163,11 +163,11 @@ def register():
     except Exception as e:
         current_app.logger.error(e)
     # 6. 初始化user模型， 添加数据至数据库
-    usr = User()
+    user = User()
     # 刚注册没有昵称，默认使用手机号作为昵称
-    user.nick_name = mobile
     user.mobile = mobile
-    # TODO:对密码加密处理使用装饰器进行加密，这里不做修改
+    user.nick_name = mobile
+    # 在User类使用装饰器进行加密，这里不做修改
     user.password = password
     # 记录一下用户最后一次登录时间
     user.last_time = datetime.now()
@@ -186,4 +186,3 @@ def register():
     session['mobile'] = user.mobile
     # 6. 返回注册结果
     return jsonify(errno=RET.OK, errmsg='OK')
-
