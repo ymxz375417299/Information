@@ -113,37 +113,56 @@ $(function(){
     })
 
 
-    // TODO 注册按钮点击
-    $(".register_form_con").submit(function (e) {
-        // 阻止默认提交操作
-        e.preventDefault()
-
-		// 取到用户输入的内容
-        var mobile = $("#register_mobile").val()
-        var smscode = $("#smscode").val()
-        var password = $("#register_password").val()
-
-		if (!mobile) {
-            $("#register-mobile-err").show();
-            return;
-        }
-        if (!smscode) {
-            $("#register-sms-code-err").show();
-            return;
-        }
-        if (!password) {
-            $("#register-password-err").html("请填写密码!");
-            $("#register-password-err").show();
-            return;
-        }
-
-		if (password.length < 6) {
-            $("#register-password-err").html("密码长度不能少于6位");
-            $("#register-password-err").show();
-            return;
-        }
-
-        // 发起注册请求
+    //  注册按钮点击
+	$(".register_form_con").submit(function(e){
+		e.preventDefault() //阻止浏览器默认提交操作,不然一点按钮就整个注册框都消失，本案例通过ajax局部刷新实现功能
+		// 获取用户提交数据
+		var mobile = $("#register_mobile").val()
+		var smscode = $("#smscode").val()
+		var password = $("#register_password").val()
+		// 校验参数
+		if(!mobile){
+			$("#register-mobile-err").show();
+			return
+		}
+		if(!password){
+			$("#register-password-err").html("请填写密码");
+			$("#register-password-err").show();
+			return
+		}
+		if(!smscode){
+			$("#register-sms-code-err").show();
+			return
+		}
+		// 拒绝密码长度小于6
+		if(password.length < 6){
+			$("#register-password-err").html("密码长度不能少于6");
+			$("#register-password-err").show()
+			return
+		}
+		// 构建data
+		var params = {
+			"mobile": mobile,
+			"password": password,
+			"smscode": smscode,
+		}
+		// 发起注册请求
+		$.ajax({
+			url: "/passport/register",
+			method: "POST",
+			contentType: "application/json",
+			dataType: "json", 
+			data: JSON.stringify(params),
+			success: function(resp){
+				if(resp == "0"){
+					//注册成功，刷新当前界面
+					location.reload();
+				}else{
+					$("#register-password-err").html(resp.errmsg);
+					$("#register-password-err").show();
+				}
+			}
+		})
 
     })
 })
