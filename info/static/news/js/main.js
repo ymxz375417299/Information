@@ -183,6 +183,59 @@ function sendSMSCode() {
     }
 
     // TODO 发送短信验证码
+	var params = {
+		"mobile":mobile,
+		"image_code": imageCode,
+		"image_code_id": imageCodeId
+	}
+
+	$.ajax({
+		// 请求地址
+		url: "/passport/smscode",
+		// 请求方式
+		method = "POST",
+		// 请求内容，需要把json对象转成字符串
+		data:JSON.stringify(params),
+		// 请求内容的数据类型
+		contentType: "application/json",
+		// 响应数据的格式
+		dataType: "json",
+		// 监听请求成功
+		sucess:function(res){
+			if (resp.errno=="0"){
+				// 倒计时60秒，60秒后允许用户再次点击发送短信验证码按钮
+				var num = 60;
+				var t = setInterval( function(){
+					if(num == 1){
+						//倒计时到最后，停止计时器对象	
+						clearInterval(t);
+						// 讲点击获取验证码按钮显示 文本回复原始文本
+						$(".get_code").html("获取验证码");
+						// 添加点击按钮的onclick函数
+						$(".get_code").attr("onclick", "sendSMCCode();");
+					}else{
+						num -= 1;
+						// 展示倒计时信息
+						$(".get_code").html(num + "秒");
+					}	
+				}, 1000)
+			}else{
+				//说明后端出现错误，可以将错误信息展示到前端页面中
+				$("#register-sms-code-err").html(reso.errmsg);
+				$("#register-sms-code-err").show();
+				// 添加点击按钮onlick事件
+				$("get_code").attr("onclick", "sendSMSCode();");
+				// 如果错误码是4004，代表验证码错误，重新生成验证码
+				if(resp.errno == "4004"){
+					generateImageCode();
+				}
+
+				
+			}
+
+		}
+	})
+
 }
 
 // 调用该函数模拟点击左侧按钮
