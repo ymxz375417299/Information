@@ -34,6 +34,7 @@ def get_image_code():
         return abort(403)  # 主动抛出异常
     # 3. 生成图片验证码
     name, text, image = captcha.generate_captcha()
+    current_app.logger.debug('图片验证码：%s' % text)
     # 4. 保存图片验证码内容到redis
     try:
         redis_store.setex("ImageCode_" + code_id,
@@ -70,10 +71,10 @@ def send_sms():
     image_code_id = param_dict.get('image_code_id')
 
     # 2. 校验参数（是否有值，是否符合规则）
-    if not all(mobile, image_code, image_code_id):
-        return jsonify(errno=RET.PARAMERR, errmsg='参数补全')
+    if not all((mobile, image_code, image_code_id)):
+        return jsonify(errno=RET.PARAMERR, errmsg='参数不全')
     # 2.1 手机号是否合法
-    if not re.match('^1{35678}\d(9)$', mobile):
+    if not re.match('^1[35678]\d{9}$', mobile):
         return jsonify(errno=RET.DATAERR, errmsg='手机号不合法')
     # 3. 通过传入的图片编码核对redis真实性
     try:
@@ -88,7 +89,7 @@ def send_sms():
     if not real_image_code:
         return jsonify(errno=RET.NODATA, errmsg='验证码已过期')
     # 4. 进行验证码内容的比对，如果不一致，返回验证码错误
-    if image_code != real_image_code:
+    if image_code.upper() != real_image_code.upper():
         # 验证码输出错误
         return jsonify(errno=RET.DATAERR, errmsg='验证码错误')
     # 4.1 TODO补： 校验手机号码是否已注册
@@ -96,13 +97,14 @@ def send_sms():
     sms_code = '%06d' % random.randint(0, 999999)
     current_app.logger.debug('短信验证码内容：%s' % sms_code)
     result = CCP().send_template_sms(mobile, [sms_code,
-                                              contants.SMS_CODE_REDIS_EXPIRES/60], '1')
+                                              constants.SMS_CODE_REDIS_EXPIRES/60], '1')
     if result != 0:
         # 成功返回0
         return jsonify(errno=RET.THIRDERR, errmsg='第三方发错出错')
     # 6. redis保存短信验证码内容
     try:
-        redis_store.setex("SMS_" % mobile, sms_code,
+        
+        redis_store.setex("SMS_%s" % mobile, sms_code,
                           constants.SMS_CODE_REDIS_EXPIRES)
     except Exception as e:
         current_app.logger.error(e)

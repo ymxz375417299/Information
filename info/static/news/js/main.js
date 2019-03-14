@@ -193,7 +193,7 @@ function sendSMSCode() {
 		// 请求地址
 		url: "/passport/smscode",
 		// 请求方式
-		method = "POST",
+		method: "POST",
 		// 请求内容，需要把json对象转成字符串
 		data:JSON.stringify(params),
 		// 请求内容的数据类型
@@ -201,7 +201,7 @@ function sendSMSCode() {
 		// 响应数据的格式
 		dataType: "json",
 		// 监听请求成功
-		sucess:function(res){
+		success:function(resp){
 			if (resp.errno=="0"){
 				// 倒计时60秒，60秒后允许用户再次点击发送短信验证码按钮
 				var num = 60;
@@ -221,10 +221,10 @@ function sendSMSCode() {
 				}, 1000)
 			}else{
 				//说明后端出现错误，可以将错误信息展示到前端页面中
-				$("#register-sms-code-err").html(reso.errmsg);
+				$("#register-sms-code-err").html(resp.errmsg);
 				$("#register-sms-code-err").show();
 				// 添加点击按钮onlick事件
-				$("get_code").attr("onclick", "sendSMSCode();");
+				$(".get_code").attr("onclick", "sendSMSCode();");
 				// 如果错误码是4004，代表验证码错误，重新生成验证码
 				if(resp.errno == "4004"){
 					generateImageCode();

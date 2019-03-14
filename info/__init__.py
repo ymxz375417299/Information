@@ -29,9 +29,9 @@ def create_app(config_name):
     db.init_app(app)
     global redis_store
     redis_store = redis.StrictRedis(
-        host=Config.REDIS_HOST, port=Config.REDIS_PORT)
+        host=Config.REDIS_HOST, port=Config.REDIS_PORT, decode_responses=True)
     # 开启CSRF保护
-    CSRFProtect(app)
+    # CSRFProtect(app)
     # 设置session保存位置，配置信息由app的config中提取，所以在config中设置session
     Session(app)
     # 注册首页模块蓝图
