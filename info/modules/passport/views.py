@@ -110,8 +110,8 @@ def send_sms():
     # 6. redis保存短信验证码内容
     try:
         
-        redis_store.setex("SMS_%s" % mobile, sms_code,
-                          constants.SMS_CODE_REDIS_EXPIRES)
+        redis_store.setex("SMS_%s" % mobile, 
+                          constants.SMS_CODE_REDIS_EXPIRES, sms_code)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='保存短信验证码失败')
@@ -134,6 +134,7 @@ def register():
     """
     
     # 1. 获取参数
+    return jsonify(errno=RET.OK, errmsg='OK')
     json_data = request.json
     mobile = json_data.get('mobile')
     sms_code = json_data.get('smscode')

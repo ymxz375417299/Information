@@ -1507,3 +1507,129 @@ INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Informati
 INFO _internal.py lines: 88 massage:  * Restarting with stat
 WARNING _internal.py lines: 88 massage:  * Debugger is active!
 INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/css/reset.css HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/css/main.css HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/js/main.js HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/js/index.js HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/logo.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/person01.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/person.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/pic_code.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:16] "[36mGET /static/news/images/clock.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:49] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 43 massage: 图片验证码：STLN
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:51] "[37mGET /passport/image_code?code_id=d9af19c3-051a-4ce7-9d25-41c5dc7f81db HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:36:51] "[36mGET /static/news/images/shutoff.png HTTP/1.1[0m" 304 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/libs/yuntongxun/sms.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 43 massage: 图片验证码：WCDP
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:37:46] "[37mGET /passport/image_code?code_id=854fa248-e846-43d8-aeda-e15dd991d221 HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 104 massage: 短信验证码内容：760937
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:37:51] "[37mPOST /passport/smscode HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:38:25] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:39:27] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:39:32] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:41:53] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 43 massage: 图片验证码：ICUK
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:41:56] "[37mGET /passport/image_code?code_id=c9e91132-6ee7-4a1d-a4e2-7fedbfefd4a1 HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 104 massage: 短信验证码内容：879277
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:42:08] "[37mPOST /passport/smscode HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 43 massage: 图片验证码：UOC6
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:44:39] "[37mGET /passport/image_code?code_id=b038f4fc-a1a2-4921-941b-dff983e95b09 HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:44:53] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 43 massage: 图片验证码：WHPX
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:44:55] "[37mGET /passport/image_code?code_id=a7a83fd7-61e8-4abe-8974-170c5284ac56 HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 104 massage: 短信验证码内容：666982
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:45:03] "[37mPOST /passport/smscode HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:45:38] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/css/reset.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/css/main.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/js/index.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/js/main.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/logo.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/person01.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/person.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/pic_code.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:05] "[37mGET /static/news/images/clock.png HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 43 massage: 图片验证码：KBAX
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:20] "[37mGET /passport/image_code?code_id=d86e6b48-ef2d-4018-b079-20869a3b062e HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:48:20] "[37mGET /static/news/images/shutoff.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:49:16] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:49:16] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/css/reset.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/css/main.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/js/index.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/js/main.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/logo.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/person01.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/person.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/pic_code.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:18] "[37mGET /static/news/images/clock.png HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 43 massage: 图片验证码：PKED
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:20] "[37mGET /passport/image_code?code_id=5559921b-3bc5-4bf4-867f-783c824be164 HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:20] "[37mGET /static/news/images/shutoff.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:26] "[37mPOST /passport/register HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 14:50:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/libs/yuntongxun/sms.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/libs/yuntongxun/sms.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005

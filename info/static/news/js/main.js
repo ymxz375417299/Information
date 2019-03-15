@@ -113,7 +113,7 @@ $(function(){
     })
 
 
-    //  注册按钮点击
+    // 注册按钮点击
 	$(".register_form_con").submit(function(e){
 		e.preventDefault() //阻止浏览器默认提交操作,不然一点按钮就整个注册框都消失，本案例通过ajax局部刷新实现功能
 		// 获取用户提交数据
@@ -154,7 +154,7 @@ $(function(){
 			dataType: "json", 
 			data: JSON.stringify(params),
 			success: function(resp){
-				if(resp == "0"){
+				if(resp.errno == "0"){
 					//注册成功，刷新当前界面
 					location.reload();
 				}else{
@@ -201,7 +201,7 @@ function sendSMSCode() {
         return;
     }
 
-    // TODO 发送短信验证码
+    // 发送短信验证码
 	var params = {
 		"mobile":mobile,
 		"image_code": imageCode,
