@@ -4,7 +4,7 @@ from .CCPRestSDK import REST
 
 
 # 说明：主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID                                                                                                                                    
-_accountSid = ''
+_accountSid = '8a216da86812593601682c07861e1cad'
 # 说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN                                                                                                                                  
 _accountToken = '3df1186fece043f3a7c66fd4f90148a8'
 # 请使用管理控制台首页的APPID或自己创建应用的APPID                                                                                                                                                                  

@@ -134,7 +134,6 @@ def register():
     """
     
     # 1. 获取参数
-    return jsonify(errno=RET.OK, errmsg='OK')
     json_data = request.json
     mobile = json_data.get('mobile')
     sms_code = json_data.get('smscode')
@@ -186,4 +185,58 @@ def register():
     session['nick_name'] = user.nick_name
     session['mobile'] = user.mobile
     # 6. 返回注册结果
+    return jsonify(errno=RET.OK, errmsg='OK')
+
+
+@passport_blu.route('/login', methods=["POST"])
+def login():
+    """
+    登录接口
+    1. 获取参数
+    2. 校验参数和合法性
+    3. 从数据库查询出指定个的用户
+    4. 保存用户登录状态
+    5. 返回结果return
+    """
+    # 1. 获取参数
+    json_data = request.json
+    mobile = json_data.get('mobile')
+    password = json_data.get('password')
+    # 2. 校验参数和合法性
+    if not re.match('^1[35678]\d{9}$', mobile):
+        return jsonify(errno=RET.PARAMERR, errmsg="手机号不合法")
+    if not all((mobile, password)):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误") 
+    # 3. 从数据库查询出指定个的用户
+    try:
+        # 获取的是User对象，不过是通过过滤后的结果
+        user = User.query.filter_by(mobile=mobile).first()
+    except Exception as e:
+        current_app.logger(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询数据错误')
+    if not user:
+        return jsonify(errno=RET.USERERR, errmsg='用户不存在')
+    # 4. 校验密码
+    import ipdb; ipdb.set_trace() # TODO BREAKPOINT
+    if not user.check_password(password):
+        return jsonify(errno=RET.PWDERR, errmsg='密码错误')
+
+
+    # 5. 保存用户登录状态
+    session['user_id'] = user.id
+    session['nick_name'] = user.nick_name
+    session['mobile'] = user.mobile
+    
+    # 6. 记录最后一次 登录时间，不用user.add 因为user是获取的数据结果， 肯定是有值的
+    user.last_login = datetime.now()
+
+    # 7. 如果在视图函数中，对模型身上的属性有修改，那么需要commit到数据库保存
+    # 但是其实可以用自己写的db.session.commit(), 前提是对SQLalchemyu有相关配置
+    # 提交数据库修改
+    try:
+        db.session.commit()
+    except Exception as e:
+        current.logger.error(e)
+
+    # 8 登录成功
     return jsonify(errno=RET.OK, errmsg='OK')
