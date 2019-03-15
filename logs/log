@@ -1736,3 +1736,68 @@ INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Informati
 INFO _internal.py lines: 88 massage:  * Restarting with stat
 WARNING _internal.py lines: 88 massage:  * Debugger is active!
 INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/css/reset.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/css/main.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/js/main.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/logo.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/js/index.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/person01.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/person.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/pic_code.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /static/news/images/clock.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:56] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:33:58] "[37mGET /static/news/images/shutoff.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:34:12] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:34:24] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/css/reset.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/css/main.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/js/main.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/js/index.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/logo.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/person01.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/person.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/pic_code.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET /static/news/images/clock.png HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:16] "[37mGET /static/news/images/shutoff.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:35:24] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage:  * Detected change in '/home/rock/Information/info/modules/passport/views.py', reloading
+INFO _internal.py lines: 88 massage:  * Restarting with stat
+WARNING _internal.py lines: 88 massage:  * Debugger is active!
+INFO _internal.py lines: 88 massage:  * Debugger PIN: 297-914-005
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:36:38] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:36:43] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:36:45] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:37:07] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/css/reset.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/css/main.css HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/js/jquery-1.12.4.min.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/js/main.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/js/index.js HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/logo.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/person01.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/news_pic.jpg HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/person.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/pic_code.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/hit_icon.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /static/news/images/clock.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:02] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:04] "[37mGET /static/news/images/shutoff.png HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:08] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:18] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:21] "[37mPOST /passport/login HTTP/1.1[0m" 200 -
+DEBUG views.py lines: 12 massage: logging testing!
+INFO _internal.py lines: 88 massage: 192.168.0.103 - - [15/Mar/2019 17:38:21] "[37mGET / HTTP/1.1[0m" 200 -

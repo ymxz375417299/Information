@@ -217,7 +217,6 @@ def login():
     if not user:
         return jsonify(errno=RET.USERERR, errmsg='用户不存在')
     # 4. 校验密码
-    import ipdb; ipdb.set_trace() # TODO BREAKPOINT
     if not user.check_password(password):
         return jsonify(errno=RET.PWDERR, errmsg='密码错误')
 

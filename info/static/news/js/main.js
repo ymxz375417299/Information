@@ -93,25 +93,53 @@ $(function(){
 		$(this).find('a')[0].click()
 	})
 
-    // TODO 登录表单提交
-    $(".login_form_con").submit(function (e) {
+    // 登录表单提交
+    $(".login_form_con").submit(function(e){
+        // 关闭浏览器默认行为
         e.preventDefault()
-        var mobile = $(".login_form #mobile").val()
-        var password = $(".login_form #password").val()
-
-        if (!mobile) {
-            $("#login-mobile-err").show();
-            return;
+        // 获取数据
+        var mobile = $(".login_form #mobile").val();
+        var password = $(".login_form #password").val();
+        
+        // 校验数据合法性
+        // 校验手机是否有值
+        if(!mobile){
+            $(".login_form #login-mobile-err").show();
+            return
         }
-
-        if (!password) {
-            $("#login-password-err").show();
-            return;
+        // 校验密码是否有值
+        if(!password){
+            $('.login_form #login-password-err').show();
+            return
         }
+        // 构建数据
+        data = {
+            'mobile': mobile,
+            'password': password,
+        }
+        // 提交数据
+        $.ajax({
+            url: "/passport/login",
+            method: "POST",
+            contentType: "application/json", // json转字符串
+            dataType: "json",
+            data: JSON.stringify(data),
+            success: function(resp){
+                if(resp.errno == '0'){
+                    //登录成功刷新页面
+                    location.reload();
+                }else{
+                    $("#login-password-err").html(resp.errmsg);
+                    $("#login-password-err").show();
+                    
+                }
 
-        // 发起登录请求
+            }
+
+        })
+        //
+        // 成功帅新页面
     })
-
 
     // 注册按钮点击
 	$(".register_form_con").submit(function(e){
