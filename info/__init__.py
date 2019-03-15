@@ -7,6 +7,7 @@ from logging.handlers import RotatingFileHandler
 
 from flask import Flask, session
 from flask_wtf.csrf import CSRFProtect
+from flask_wtf.csrf import generate_csrf
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 from config import Config, config
@@ -31,7 +32,7 @@ def create_app(config_name):
     redis_store = redis.StrictRedis(
         host=Config.REDIS_HOST, port=Config.REDIS_PORT, decode_responses=True)
     # 开启CSRF保护
-    # CSRFProtect(app)
+    CSRFProtect(app)
     # 设置session保存位置，配置信息由app的config中提取，所以在config中设置session
     Session(app)
     # 注册首页模块蓝图
@@ -40,6 +41,15 @@ def create_app(config_name):
     # 注册passport模块蓝图
     from info.modules.passport import passport_blu 
     app.register_blueprint(passport_blu)
+
+    # 拦截用户的响应，通过after_request勾子
+    @app.after_request
+    def agter_request(response):
+        # 调用函数生成csr_token
+        csrf_token = generate_csrf()
+        # 通过cookies 将值传给前端
+        response.set_cookie('csrf_token', csrf_token)
+        return response
 
     return app
 
@@ -59,3 +69,4 @@ def setup_log(config_name):
     file_log_handler.setFormatter(formatter)
     # 为全局日志工具对象（flaskk app 使用）添加日志记录器
     logging.getLogger().addHandler(file_log_handler)
+
