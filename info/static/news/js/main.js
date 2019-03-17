@@ -328,3 +328,19 @@ function generateUUID() {
     });
     return uuid;
 }
+
+function logout(){
+    $.ajax({
+        url: "/passport/logout",
+        method: "post",
+        contentType: "application/json",
+        dataType: "json",
+        headers: {
+            "X_CSRFToken": getCookie('csrf_token')
+        },
+        success: function(){
+            //刷新当前页面
+            location.reload();
+        }
+    })
+}

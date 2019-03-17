@@ -1,7 +1,7 @@
 # coding=utf-8
 import re
 import random
-from datetime import datetime 
+from datetime import datetime
 
 from flask import request
 from flask import abort
@@ -16,9 +16,8 @@ from info import constants
 from info.utils.captcha.captcha import captcha
 from info.utils.response_code import RET
 from info.libs.yuntongxun.sms import CCP
-from info.models import User # 数据库模型
+from info.models import User  # 数据库模型
 from . import passport_blu
-
 
 
 @passport_blu.route('/image_code')
@@ -109,8 +108,8 @@ def send_sms():
         return jsonify(errno=RET.THIRDERR, errmsg='第三方发错出错')
     # 6. redis保存短信验证码内容
     try:
-        
-        redis_store.setex("SMS_%s" % mobile, 
+
+        redis_store.setex("SMS_%s" % mobile,
                           constants.SMS_CODE_REDIS_EXPIRES, sms_code)
     except Exception as e:
         current_app.logger.error(e)
@@ -132,7 +131,7 @@ def register():
     7. 保存当前的用户状态
     6. 返回注册结果
     """
-    
+
     # 1. 获取参数
     json_data = request.json
     mobile = json_data.get('mobile')
@@ -144,13 +143,13 @@ def register():
     # 3. 判断参数是否有值
     if not all((mobile, sms_code, password)):
         return jsonify(errno=RET.PARAMERR, errmsg='参数错误')
-    # 4. 从redis中获取指定手机号对应的短信验证码 
+    # 4. 从redis中获取指定手机号对应的短信验证码
     try:
         real_sms_code = redis_store.get('SMS_%s' % mobile)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='获取本地验证码失败')
-    
+
     # 4.1 短信验证码过期
     if not real_sms_code:
         return jsonify(errno=RET.NODATA, errmsg='短信验证码过期')
@@ -206,7 +205,7 @@ def login():
     if not re.match('^1[35678]\d{9}$', mobile):
         return jsonify(errno=RET.PARAMERR, errmsg="手机号不合法")
     if not all((mobile, password)):
-        return jsonify(errno=RET.PARAMERR, errmsg="参数错误") 
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
     # 3. 从数据库查询出指定个的用户
     try:
         # 获取的是User对象，不过是通过过滤后的结果
@@ -220,12 +219,11 @@ def login():
     if not user.check_password(password):
         return jsonify(errno=RET.PWDERR, errmsg='密码错误')
 
-
     # 5. 保存用户登录状态
     session['user_id'] = user.id
     session['nick_name'] = user.nick_name
     session['mobile'] = user.mobile
-    
+
     # 6. 记录最后一次 登录时间，不用user.add 因为user是获取的数据结果， 肯定是有值的
     user.last_login = datetime.now()
 
@@ -238,4 +236,20 @@ def login():
         current.logger.error(e)
 
     # 8 登录成功
+    return jsonify(errno=RET.OK, errmsg='OK')
+
+
+@passport_blu.route('/logout', methods=['POST'])
+def logout():
+    """
+    清除session的对应登录之后的保存信息
+    """
+    # pop 是移除session中的数据 和字典的用法一致
+    # pop 会有返回值，如果没有则默认NOne
+    import ipdb; ipdb.set_trace() # TODO 验证码一下session的值，看下
+    session.pop('user_id', None)
+    session.pop('nick_name', None)
+    session.pop('mobile', None)
+
+    # 返回结果，返回json，重定向首页都可以
     return jsonify(errno=RET.OK, errmsg='OK')
